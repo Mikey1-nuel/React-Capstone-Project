@@ -12,16 +12,17 @@ const DetailsPage = () => {
       setState(countryDetails);
     };
     getDetails();
-  }, []);
+  }, [name]);
 
   return (
     <div>
       {
-      state ? (
-        <div className="detail-container">
-          <Header />
-          <div className="detail-container2">
-            <img src={state.countryInfo.flag} alt="country flag" />
+        state ? (
+          <div className="detail-container">
+            <Header />
+            <div className="imgcont">
+              <img src={state.countryInfo.flag} alt="country flag" className="img" />
+            </div>
             <div className="detail-container3">
               <h2 className="name">
                 <span>Country:&nbsp;&nbsp; </span>
@@ -74,11 +75,10 @@ const DetailsPage = () => {
               <h2>{}</h2>
             </div>
           </div>
-        </div>
-      ) : (
-        <div>Loading</div>
-      )
-    }
+        ) : (
+          <div>Loading</div>
+        )
+      }
     </div>
   );
 };

@@ -16,8 +16,7 @@ export const GET_CONTINENT = 'metrics-webapp/continent/GET_CONTINENT';
 const initialState = [];
 
 export const getContinent = () => async (dispatch) => {
-  let theContinent = await fetchCovidData();
-  theContinent = theContinent.filter((item) => item.continent === 'Europe');
+  const theContinent = await fetchCovidData();
   const mappedData = theContinent.map(({ countryInfo: { _id: id, flag }, ...item }) => ({
     country: item.country,
     cases: item.cases,

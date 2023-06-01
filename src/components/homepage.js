@@ -5,7 +5,7 @@ import Header from './nav';
 
 const HomePage = () => {
   const [search, setSearch] = useState('');
-  const worldCountries = useSelector((state) => state.continent);
+  const worldCountries = useSelector((state) => state.continentReducer);
   const filteredCountries = worldCountries.filter((country) => {
     const newVar = country.country.toLowerCase().includes(search);
     return newVar;
