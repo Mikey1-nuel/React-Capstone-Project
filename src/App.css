@@ -100,9 +100,16 @@ input {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.detail-container2 img {
+.imgcont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
   width: 30%;
   margin-bottom: 10px;
+  padding-top: 100px;
 }
 
 .detail-container3 .name {
