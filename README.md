@@ -79,7 +79,7 @@ I select an API(https://disease.sh/v3/covid-19/countries) that provides Covid-19
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [You can check the live demo here](https://covid-19-data-analysis.onrender.com)
+- [You can check the live demo here](https://covid-19-data-analysis.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
