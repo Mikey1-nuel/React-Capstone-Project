@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;800;1000&family=Open+Sans:ital,wght@0,300;1,300&family=Roboto+Slab:wght@300;400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #077175;
+  font-family: poppins;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
+  width: 100%;
+  height: 12vh;
+  background: #062e2f;
+  position: fixed;
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Eu-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.main-container,
+.detail-container2 {
+  padding-top: 90px;
+}
+
+.inputcont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+input {
+  width: 40%;
+  text-align: center;
+  padding: .5rem;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+}
+
+.country-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.countrycard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #062e2f;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* .countrycard:hover {
+  transform: scale(2.1rem);
+} */
+
+.countrycard a {
+  text-decoration: none;
+}
+
+.detail-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-container3 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.detail-container2 img {
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.detail-container3 .name {
+  background-color: #062e2f;
+  margin: 2px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.microphone,
+.setting-icon,
+.icon {
+  font-size: 1.5rem;
+  color: #077175;
+}
+
+.countrycard:hover {
+  border: 1px solid #fff;
 }
