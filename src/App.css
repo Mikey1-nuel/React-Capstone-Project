@@ -8,7 +8,7 @@
 
 body {
   background: #077175;
-  font-family: poppins;
+  font-family: poppins, sans-serif;
 }
 
 h1,
@@ -58,7 +58,7 @@ h4 {
 input {
   width: 40%;
   text-align: center;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 40px;
   border: none;
   outline: none;
