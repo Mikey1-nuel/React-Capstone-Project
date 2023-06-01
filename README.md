@@ -9,6 +9,7 @@ One attachment
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
   - [🚀 Live Demo](#live-demo)
+  - [🚀 Project Presentation](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -81,6 +82,14 @@ I select an API(https://disease.sh/v3/covid-19/countries) that provides Covid-19
 - [You can check the live demo here](https://covid-19-data-analysis.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🚀 Project Presentation <a name="live-demo"></a>
+
+- [You can check the loom video here](https://www.loom.com/share/8c2a251a2dae46218d780c90b1c201a5)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
  
 ## 💻 Getting Started <a name="getting-started"></a>
  
