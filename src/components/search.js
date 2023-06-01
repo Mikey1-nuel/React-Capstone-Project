@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { getCovidDataByCountry } from '../redux/country/countrySlice';
+import { fetchCovidDataByCountry } from '../redux/country/countrySlice';
 import Header from './nav';
 
 const DetailsPage = () => {
@@ -8,11 +8,11 @@ const DetailsPage = () => {
   const [state, setState] = useState(null);
   useEffect(() => {
     const getDetails = async () => {
-      const countryDetails = await getCovidDataByCountry(name);
+      const countryDetails = await fetchCovidDataByCountry(name);
       setState(countryDetails);
     };
     getDetails();
-  }, [name]);
+  }, []);
 
   return (
     <div>

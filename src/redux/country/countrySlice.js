@@ -1,12 +1,12 @@
 const baseUrl = 'https://disease.sh/v3/covid-19/countries';
 
-export const getCovidData = async () => {
+export const fetchCovidData = async () => {
   const response = await fetch(baseUrl);
   const result = await response.json();
   return result;
 };
 
-export const getCovidDataByCountry = async (name) => {
+export const fetchCovidDataByCountry = async (name) => {
   const response = await fetch(`${baseUrl}/${name}`);
   const result = await response.json();
   return result;
@@ -16,7 +16,8 @@ export const GET_CONTINENT = 'metrics-webapp/continent/GET_CONTINENT';
 const initialState = [];
 
 export const getContinent = () => async (dispatch) => {
-  const theContinent = await getCovidData();
+  let theContinent = await fetchCovidData();
+  theContinent = theContinent.filter((item) => item.continent === 'Europe');
   const mappedData = theContinent.map(({ countryInfo: { _id: id, flag }, ...item }) => ({
     country: item.country,
     cases: item.cases,
