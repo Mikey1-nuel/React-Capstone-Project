@@ -1,14 +1,44 @@
-import { createSlice } from '@reduxjs/toolkit';
+const baseUrl = 'https://disease.sh/v3/covid-19/countries';
 
-const initialState = {
-  county: [],
+export const fetchCovidData = async () => {
+  const response = await fetch(baseUrl);
+  const result = await response.json();
+  return result;
 };
 
-const CountrySLice = createSlice({
-  name: 'country',
-  initialState,
-  reducers: {},
-  extraReducers: {},
-});
+export const fetchCovidDataByCountry = async (name) => {
+  const response = await fetch(`${baseUrl}/${name}`);
+  const result = await response.json();
+  return result;
+};
 
-export default CountrySLice.reducer;
+export const GET_CONTINENT = 'metrics-webapp/continent/GET_CONTINENT';
+const initialState = [];
+
+export const getContinent = () => async (dispatch) => {
+  const theContinent = await fetchCovidData();
+  const mappedData = theContinent.map(({ countryInfo: { _id: id, flag }, ...item }) => ({
+    country: item.country,
+    cases: item.cases,
+    active: item.active,
+    test: item.tests,
+    population: item.population,
+    countryFlag: flag,
+    countryID: id,
+    critical: item.critical,
+  }));
+  dispatch({
+    type: GET_CONTINENT,
+    payload: mappedData,
+  });
+};
+
+const continentReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case GET_CONTINENT:
+      return action.payload;
+    default: return state;
+  }
+};
+
+export default continentReducer;
